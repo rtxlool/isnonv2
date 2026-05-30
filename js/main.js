@@ -8,11 +8,18 @@
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-  /* ---------- Loader ---------- */
-  window.addEventListener('load', function () {
+  /* ---------- Loader (bulletproof dismiss) ---------- */
+  (function () {
     var l = document.querySelector('.loader');
-    if (l) setTimeout(function () { l.classList.add('done'); document.body.classList.add('ready'); }, 1900);
-  });
+    var fired = false;
+    function dismiss() { if (fired) return; fired = true; if (l) l.classList.add('done'); document.body.classList.add('ready'); }
+    function arm() { setTimeout(dismiss, 1600); }
+    // If load already happened, arm now; else wait for it.
+    if (document.readyState === 'complete') arm();
+    else window.addEventListener('load', arm);
+    // Hard fallback — never let the overlay trap the page.
+    setTimeout(dismiss, 4000);
+  })();
 
   /* ---------- Lenis — heavy, deliberate inertia ---------- */
   var lenis = null;
