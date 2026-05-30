@@ -78,7 +78,7 @@
   /* ---------- Gentle parallax (very subtle) ---------- */
   if (window.gsap && window.ScrollTrigger && !reduce) {
     document.querySelectorAll('.hero-media .zoom').forEach(function (z) {
-      window.gsap.to(z, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: z.closest('.hero-media'), start: 'top bottom', end: 'bottom top', scrub: true } });
+      window.gsap.to(z, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: z.closest('.hero-media'), start: 'top bottom', end: 'bottom top', scrub: true } });
     });
     document.querySelectorAll('.tile .frame img').forEach(function (img) {
       window.gsap.fromTo(img, { yPercent: -3 }, { yPercent: 3, ease: 'none', scrollTrigger: { trigger: img.closest('.tile'), start: 'top bottom', end: 'bottom top', scrub: true } });
