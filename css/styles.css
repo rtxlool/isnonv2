@@ -88,7 +88,7 @@ body{
 
 /* ---------- Loader ---------- */
 .loader{position:fixed;inset:0;z-index:1000;background:var(--paper);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:34px}
-.loader.done{opacity:0;visibility:hidden;transition:opacity 1.4s var(--ease),visibility 0s 1.4s}
+.loader.done{opacity:0;visibility:hidden;pointer-events:none;transition:opacity 1.4s var(--ease),visibility 0s 1.4s}
 .loader .mk{font-family:var(--serif);font-size:clamp(22px,3vw,40px);font-weight:300;letter-spacing:.06em;color:var(--ink);opacity:0;animation:lfade 1.6s var(--ease) .2s forwards}
 .loader .ln{width:1px;height:64px;background:var(--line);position:relative;overflow:hidden}
 .loader .ln i{position:absolute;inset:0;background:var(--clay);transform:scaleY(0);transform-origin:top;animation:ldraw 1.6s var(--ease-io) .3s forwards}
@@ -232,6 +232,15 @@ body{
 
 /* ---------- Magnetic ---------- */
 [data-mag]{display:inline-block;will-change:transform}
+
+/* ---------- Progressive enhancement: if JS is off/broken, reveal all ----------
+   Default markup hides reveal targets; these resets guarantee content is
+   visible without JS so the page can never render blank. */
+.no-js .loader{display:none!important}
+.no-js .reveal,.no-js .hero-foot,.no-js .tcap{opacity:1!important;transform:none!important;filter:none!important}
+.no-js .reveal-frame .frame{clip-path:none!important}
+.no-js .reveal-frame .frame img,.no-js .reveal-frame .frame .zoom>img{transform:none!important}
+.no-js .hero .eyebrow span,.no-js .hero h1 .line>span{opacity:1!important;transform:none!important;filter:none!important}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion:reduce){

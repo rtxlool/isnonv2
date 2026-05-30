@@ -8,17 +8,24 @@
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
 
-  /* ---------- Loader (bulletproof dismiss) ---------- */
+  /* ---------- Loader (bulletproof dismiss, inline styles) ---------- */
   (function () {
     var l = document.querySelector('.loader');
     var fired = false;
-    function dismiss() { if (fired) return; fired = true; if (l) l.classList.add('done'); document.body.classList.add('ready'); }
-    function arm() { setTimeout(dismiss, 1600); }
-    // If load already happened, arm now; else wait for it.
-    if (document.readyState === 'complete') arm();
-    else window.addEventListener('load', arm);
-    // Hard fallback — never let the overlay trap the page.
-    setTimeout(dismiss, 4000);
+    function dismiss() {
+      if (fired) return; fired = true;
+      document.body.classList.add('ready');
+      if (l) {
+        l.classList.add('done');
+        // Inline styles can't be defeated by a stale/parse-broken stylesheet.
+        l.style.opacity = '0';
+        l.style.pointerEvents = 'none';
+        setTimeout(function () { l.style.display = 'none'; }, 1500);
+      }
+    }
+    if (document.readyState === 'complete') setTimeout(dismiss, 1500);
+    else window.addEventListener('load', function () { setTimeout(dismiss, 1500); });
+    setTimeout(dismiss, 3800); // hard fallback — never trap the page
   })();
 
   /* ---------- Lenis — heavy, deliberate inertia ---------- */
@@ -103,11 +110,25 @@
   // wrap hero eyebrow text for masked rise
   document.querySelectorAll('[data-mask] ').forEach(function (el) { el.innerHTML = '<span>' + el.innerHTML + '</span>'; });
 
-  /* ---------- Reveal observer (generous margin so things "arrive") ---------- */
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.16, rootMargin: '0px 0px -12% 0px' });
-  document.querySelectorAll('.reveal,.reveal-frame,.tile,.hero,[data-reveal]').forEach(function (el) { io.observe(el); });
+  /* ---------- Reveals (scroll-position based — robust vs IO throttling) ----------
+     Adds .in when an element's top crosses into the lower viewport. Driven by
+     native scroll AND the Lenis loop AND load/resize, so it can't silently
+     fail the way a throttled IntersectionObserver can in some contexts. A 5s
+     safety reveals any straggler so content is never permanently hidden. */
+  var revealEls = [].slice.call(document.querySelectorAll('.reveal,.reveal-frame,.tile,.hero,[data-reveal]'));
+  function checkReveal() {
+    var vh = window.innerHeight;
+    for (var i = revealEls.length - 1; i >= 0; i--) {
+      var r = revealEls[i].getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > -10) { revealEls[i].classList.add('in'); revealEls.splice(i, 1); }
+    }
+  }
+  checkReveal();
+  addEventListener('scroll', checkReveal, { passive: true });
+  addEventListener('resize', checkReveal);
+  if (lenis) lenis.on('scroll', checkReveal);
+  window.addEventListener('load', function () { checkReveal(); setTimeout(checkReveal, 300); });
+  setTimeout(function () { revealEls.forEach(function (el) { el.classList.add('in'); }); }, 5000);
 
   /* ---------- GSAP parallax ---------- */
   if (window.gsap && window.ScrollTrigger && !reduce) {
