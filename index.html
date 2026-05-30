@@ -4,29 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inson Dubois Wood — Residential Interiors</title>
-<meta name="description" content="A New York residential interior design studio. Quietly luxurious homes in Manhattan, Greenwich, Palm Beach and abroad. By appointment.">
-<meta property="og:title" content="Inson Dubois Wood — Residential Interiors">
-<meta property="og:description" content="Quietly luxurious residences. New York · Greenwich · Palm Beach · Europe.">
+<meta name="description" content="A New York residential interior design studio. Quietly considered homes in Manhattan, Greenwich, Palm Beach and abroad. By appointment, since 1987.">
+<meta property="og:title" content="Inson Dubois Wood">
+<meta property="og:description" content="Residential interiors, quietly composed. New York · Greenwich · Palm Beach · Europe.">
+<meta name="theme-color" content="#f3eee4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
 <!-- Loader -->
 <div class="loader" aria-hidden="true">
-  <div class="mark"><span>Inson Dubois Wood</span></div>
-  <div class="bar"><i></i></div>
+  <div class="mk">Inson Dubois Wood</div>
+  <div class="ln"><i></i></div>
 </div>
 
 <!-- Header -->
 <header class="header">
-  <a href="#top" class="brand"><span class="dot"></span>Inson Dubois Wood</a>
+  <a href="#top" class="brand" data-mag>Inson Dubois Wood</a>
   <nav class="nav">
     <a href="#work">Work</a>
     <a href="#studio">Studio</a>
-    <a href="#contact" class="cta">Enquire</a>
+    <a href="#contact" class="cta" data-mag>Enquire</a>
   </nav>
 </header>
 
@@ -34,66 +38,83 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-img"><img src="images/projects/greenwich-manor-house.jpg" alt="Greenwich Manor House interior"></div>
-    <div class="hero-inner">
-      <h1 class="display" data-split>Interiors that<br>keep their <em>composure.</em></h1>
-      <div class="hero-row">
-        <p class="rise">A residential studio for those who have stopped trying to impress — and started living well. New York, since 1987.</p>
-        <span class="scrollcue meta rise">Scroll <span class="ln"><i></i></span></span>
-      </div>
+    <span class="eyebrow" data-mask>Residential Interiors — Est. 1987</span>
+    <h1 data-split>Spaces that<br>hold their<br><em>silence.</em></h1>
+    <div class="hero-foot">
+      <p>A New York studio composing homes for a life already well lived.</p>
+      <span class="scrollcue meta">Scroll <span class="l"><i></i></span></span>
+    </div>
+
+    <div class="hero-media reveal-frame">
+      <div class="frame"><div class="zoom"><img src="images/projects/greenwich-manor-house.jpg" alt="Greenwich Manor House — principal room" class="amb"></div></div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
+  <!-- Statement I -->
+  <section class="wrap statement">
+    <span class="eyebrow reveal">The Studio</span>
+    <p class="reveal" data-d="1">Restraint, given <em>room</em> to breathe.</p>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="wrap">
+    <div class="shead">
+      <h2 class="serif reveal">Selected <em>residences</em></h2>
+      <div class="right meta reveal" data-d="1">Thirty homes<br>1987 — present</div>
+    </div>
+
+    <div class="gal">
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/malmo-pool-house.jpg" alt="Midcentury Pool House, Malmö"></div><div class="tcap"><span class="idx">01</span><span class="ttl serif">Midcentury Pool House</span><span class="loc">Malmö</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/paris-penthouse.jpg" alt="Paris Penthouse"></div><div class="tcap"><span class="idx">02</span><span class="ttl serif">Paris Penthouse</span><span class="loc">Paris</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/west-village-townhouse.jpg" alt="West Village Townhouse"></div><div class="tcap"><span class="idx">03</span><span class="ttl serif">West Village Townhouse</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/palm-beach-villa.jpg" alt="Palm Beach Villa"></div><div class="tcap"><span class="idx">04</span><span class="ttl serif">Palm Beach Villa</span><span class="loc">Florida</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/tribeca-loft.jpg" alt="Tribeca Loft"></div><div class="tcap"><span class="idx">05</span><span class="ttl serif">Tribeca Loft</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/mediterranean-villa.jpg" alt="Mediterranean Estate, Mallorca"></div><div class="tcap"><span class="idx">06</span><span class="ttl serif">Mediterranean Estate</span><span class="loc">Mallorca</span></div></a>
+    </div>
+  </section>
+
+  <!-- Cinematic full-bleed break -->
+  <section class="break" data-dark>
+    <div class="bimg"><img src="images/projects/lake-como-farm-house.jpg" alt="Lake Como Farm House"></div>
+    <div class="bcap">
+      <span class="eyebrow">Lake Como</span>
+      <p>Light, weight, and the patience to leave things unsaid.</p>
+    </div>
+  </section>
+
+  <!-- Work cont. -->
+  <section class="wrap" style="padding-top:clamp(90px,16vh,200px)">
+    <div class="gal">
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/central-park-penthouse.jpg" alt="Central Park Penthouse"></div><div class="tcap"><span class="idx">07</span><span class="ttl serif">Central Park Penthouse</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/northern-thailand-retreat.jpg" alt="Northern Thailand Retreat"></div><div class="tcap"><span class="idx">08</span><span class="ttl serif">Northern Thailand Retreat</span><span class="loc">Chiang Rai</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/greenwich-carriage-house.jpg" alt="Greenwich Carriage House"></div><div class="tcap"><span class="idx">09</span><span class="ttl serif">Greenwich Carriage House</span><span class="loc">Connecticut</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/park-avenue-duplex.jpg" alt="Park Avenue Duplex"></div><div class="tcap"><span class="idx">10</span><span class="ttl serif">Park Avenue Duplex</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/connecticut-country-house.jpg" alt="Connecticut Country House"></div><div class="tcap"><span class="idx">11</span><span class="ttl serif">Connecticut Country House</span><span class="loc">Falls Village</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/hamptons-colonial.jpg" alt="Hamptons Colonial"></div><div class="tcap"><span class="idx">12</span><span class="ttl serif">Hamptons Colonial</span><span class="loc">Quogue</span></div></a>
+    </div>
+  </section>
+
+  <!-- Statement II -->
+  <section class="wrap statement">
+    <p class="reveal serif">We design <em>fewer</em> homes, more slowly — so each still feels right on the thousandth evening.</p>
+  </section>
+
+  <!-- Marquee of places -->
+  <div class="marq" aria-hidden="true">
+    <div class="marq-t">
       <span>New York</span><span>Greenwich</span><span>Palm Beach</span><span>Paris</span><span>Lake Como</span><span>Mallorca</span><span>Chiang Mai</span>
     </div>
   </div>
 
-  <!-- Work -->
-  <section id="work" class="wrap">
-    <div class="section-head">
-      <h2 class="serif">Selected <em>residences</em></h2>
-      <div class="right meta rise">Thirty homes · 1987 — present</div>
-    </div>
-
-    <div class="grid">
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/malmo-pool-house.jpg" alt=""></div><div class="cap"><span class="t">Midcentury Pool House</span><span class="l meta">Malmö</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/paris-penthouse.jpg" alt=""></div><div class="cap"><span class="t">Paris Penthouse</span><span class="l meta">Paris</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/palm-beach-villa.jpg" alt=""></div><div class="cap"><span class="t">Palm Beach Villa</span><span class="l meta">Florida</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/west-village-townhouse.jpg" alt=""></div><div class="cap"><span class="t">West Village Townhouse</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/mediterranean-villa.jpg" alt=""></div><div class="cap"><span class="t">Mediterranean Estate</span><span class="l meta">Mallorca</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/tribeca-loft.jpg" alt=""></div><div class="cap"><span class="t">Tribeca Loft</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/lake-como-farm-house.jpg" alt=""></div><div class="cap"><span class="t">Lake Como Farm House</span><span class="l meta">Lombardy</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/central-park-penthouse.jpg" alt=""></div><div class="cap"><span class="t">Central Park Penthouse</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/northern-thailand-retreat.jpg" alt=""></div><div class="cap"><span class="t">Northern Thailand Retreat</span><span class="l meta">Chiang Rai</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/greenwich-carriage-house.jpg" alt=""></div><div class="cap"><span class="t">Greenwich Carriage House</span><span class="l meta">Connecticut</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/park-avenue-duplex.jpg" alt=""></div><div class="cap"><span class="t">Park Avenue Duplex</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/upper-east-side-townhouse.jpg" alt=""></div><div class="cap"><span class="t">Upper East Side Townhouse</span><span class="l meta">New York</span></div></a>
-    </div>
-  </section>
-
-  <!-- Statement -->
-  <section class="wrap statement">
-    <p class="serif rise" data-reveal>We design <em>fewer</em> homes, <em>slowly</em> — so each one still feels right on the thousandth night.</p>
-  </section>
-
-  <!-- More work -->
-  <section class="wrap" style="padding-top:0;">
-    <div class="grid">
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/chiangmai-country-house.jpg" alt=""></div><div class="cap"><span class="t">Chiang Mai Country House</span><span class="l meta">Thailand</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/5th-avenue-condo.png" alt=""></div><div class="cap"><span class="t">Fifth Avenue Condo</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/connecticut-country-house.jpg" alt=""></div><div class="cap"><span class="t">Connecticut Country House</span><span class="l meta">Falls Village</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/hamptons-colonial.jpg" alt=""></div><div class="cap"><span class="t">Hamptons Colonial</span><span class="l meta">Quogue</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/greenwich-village-townhouse.jpg" alt=""></div><div class="cap"><span class="t">Greenwich Village Townhouse</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/upper-eastside-condo.jpg" alt=""></div><div class="cap"><span class="t">Upper Eastside Condo</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/mardi-gras-academy-mansion.jpg" alt=""></div><div class="cap"><span class="t">Academy Mansion</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/greenwich-manor.jpg" alt=""></div><div class="cap"><span class="t">Greenwich Manor</span><span class="l meta">Connecticut</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/lower-east-side-triplex.jpg" alt=""></div><div class="cap"><span class="t">Lower East Side Triplex</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/upper-east-side-carriage-house.jpg" alt=""></div><div class="cap"><span class="t">UES Carriage House</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/uppereastside-custom-kitchen.jpg" alt=""></div><div class="cap"><span class="t">Custom Kitchen</span><span class="l meta">New York</span></div></a>
-      <a href="#contact" class="tile"><div class="frame"><img src="images/projects/townhouse-holiday.jpg" alt=""></div><div class="cap"><span class="t">Holiday Townhouse</span><span class="l meta">New York</span></div></a>
+  <!-- Work cont. -->
+  <section class="wrap" style="padding-top:clamp(90px,16vh,200px)">
+    <div class="gal">
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/5th-avenue-condo.png" alt="Fifth Avenue Condo"></div><div class="tcap"><span class="idx">13</span><span class="ttl serif">Fifth Avenue Condo</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/greenwich-village-townhouse.jpg" alt="Greenwich Village Townhouse"></div><div class="tcap"><span class="idx">14</span><span class="ttl serif">Greenwich Village Townhouse</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/chiangmai-country-house.jpg" alt="Chiang Mai Country House"></div><div class="tcap"><span class="idx">15</span><span class="ttl serif">Chiang Mai Country House</span><span class="loc">Thailand</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/mardi-gras-academy-mansion.jpg" alt="Academy Mansion"></div><div class="tcap"><span class="idx">16</span><span class="ttl serif">Academy Mansion</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/upper-east-side-carriage-house.jpg" alt="Upper East Side Carriage House"></div><div class="tcap"><span class="idx">17</span><span class="ttl serif">UES Carriage House</span><span class="loc">New York</span></div></a>
+      <a href="#contact" class="tile reveal-frame"><div class="frame"><img src="images/projects/greenwich-manor.jpg" alt="Greenwich Manor"></div><div class="tcap"><span class="idx">18</span><span class="ttl serif">Greenwich Manor</span><span class="loc">Connecticut</span></div></a>
     </div>
   </section>
 
@@ -101,44 +122,31 @@
   <section id="studio" class="wrap">
     <div class="ethos">
       <div class="lead">
-        <span class="eyebrow rise">The Studio</span>
-        <h3 class="serif rise" data-reveal style="margin-top:20px;">Restraint, in rooms built to be lived in — not photographed.</h3>
+        <span class="eyebrow reveal">The Studio</span>
+        <h3 class="reveal" data-d="1" style="margin-top:24px">Rooms built to be <em>lived in</em> — not photographed.</h3>
       </div>
       <div class="cols">
-        <div class="rise"><h4>Practice</h4><p>Full-scope residential interiors, in close collaboration with the architect, from first plan to the final object placed on a shelf.</p></div>
-        <div class="rise"><h4>Approach</h4><p>Natural materials with weight. Light layered low. Fewer things, better made. A house that ages into itself rather than out of fashion.</p></div>
-        <div class="rise"><h4>Clients</h4><p>A short, private roster. Most work arrives by introduction. We take on only a handful of homes a year.</p></div>
-        <div class="rise"><h4>Recognition</h4><p>Architectural Digest · Elle Decor A-List · Veranda · The New York Times. Quietly, over four decades.</p></div>
+        <div class="reveal"><h4>Practice</h4><p>Full-scope residential interiors, in close collaboration with the architect — from first plan to the last object placed.</p></div>
+        <div class="reveal" data-d="1"><h4>Approach</h4><p>Natural materials with weight. Light layered low. Fewer things, better made. A house that ages into itself.</p></div>
+        <div class="reveal"><h4>Clientele</h4><p>A short, private roster. Most work arrives by introduction; we take on only a handful of homes each year.</p></div>
+        <div class="reveal" data-d="1"><h4>Recognition</h4><p>Architectural Digest · Elle Decor A-List · Veranda · The New York Times — quietly, across four decades.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact / Footer -->
-  <footer id="contact" class="foot">
+  <!-- Contact / footer (dark) -->
+  <footer id="contact" class="foot" data-dark>
     <div class="wrap">
-      <div class="big serif rise" data-reveal>Let's design something<br><em>that lasts.</em></div>
-      <a href="mailto:inson@insonwood.com" class="email">inson@insonwood.com</a>
+      <div class="big reveal" data-split>Let us design<br>something <em>lasting.</em></div>
+      <a href="mailto:inson@insonwood.com" class="email" data-mag>inson@insonwood.com</a>
 
-      <div class="foot-grid">
-        <div>
-          <h5>Studio</h5>
-          <p>526 West 26th Street, Suite 805<br>New York, NY 10001<br>By appointment</p>
-        </div>
-        <div>
-          <h5>Connect</h5>
-          <a href="tel:+12123431077">+1 212 343 1077</a>
-          <a href="#">Instagram</a>
-          <a href="#">Pinterest</a>
-        </div>
-        <div>
-          <h5>Index</h5>
-          <a href="#work">Work</a>
-          <a href="#studio">Studio</a>
-          <a href="#contact">Enquire</a>
-        </div>
+      <div class="fgrid">
+        <div><h5>Studio</h5><p>526 West 26th Street, Suite 805<br>New York, NY 10001<br>By appointment</p></div>
+        <div><h5>Connect</h5><a href="tel:+12123431077">+1 212 343 1077</a><a href="#">Instagram</a><a href="#">Pinterest</a></div>
+        <div><h5>Index</h5><a href="#work">Work</a><a href="#studio">Studio</a><a href="#contact">Enquire</a></div>
       </div>
 
-      <div class="foot-base meta">
+      <div class="fbase meta">
         <span>© <span data-year></span> Inson Dubois Wood</span>
         <span>Residential Interiors · New York</span>
       </div>
